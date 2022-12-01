@@ -1,7 +1,8 @@
-import * as React from 'react';
 import { useState } from 'react';
-import { List, Datagrid, TextField, EmailField } from 'react-admin';
+import { List, Datagrid, TextField, EmailField, EditButton } from 'react-admin';
 import BaseAlert from '../alerts/BaseAlert';
+
+import { postFilter } from '../filter/postFilter';
 
 export interface User {
   id: number;
@@ -17,7 +18,7 @@ export const UserList = (props: User) => {
   const updateIsOpen = () => setIsOpen(false);
   return (
     <>
-      <List {...props}>
+      <List {...props} filters={postFilter}>
         <Datagrid rowClick="edit">
           <TextField source="id" />
           <TextField source="name" />
@@ -25,6 +26,7 @@ export const UserList = (props: User) => {
           <EmailField source="email" />
           <TextField source="phone" />
           <TextField source="website" />
+          <EditButton />
         </Datagrid>
       </List>
       <BaseAlert

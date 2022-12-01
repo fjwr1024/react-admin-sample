@@ -122,12 +122,12 @@ const Menu = ({ dense = false }: MenuProps) => {
         />
       </SubMenu> */}
       <MenuItemLink
-        to="/reviews"
+        to="/nfts"
         state={{ _scrollToTop: true }}
-        primaryText={translate(`resources.reviews.name`, {
+        primaryText={translate(`NFTList`, {
           smart_count: 2,
         })}
-        // leftIcon={<reviews.icon />}
+        leftIcon={<LabelIcon />}
         dense={dense}
       />
     </Box>

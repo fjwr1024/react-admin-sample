@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable prefer-promise-reject-errors */
 import { AuthProvider } from 'react-admin';
 
