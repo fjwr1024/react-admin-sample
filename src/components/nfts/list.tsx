@@ -10,7 +10,7 @@ export interface NFT {
   royalty: number;
 }
 
-export const UserList = (props: NFT) => (
+export const NFTList = (props: NFT) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />

@@ -43,6 +43,24 @@ const Menu = ({ dense = false }: MenuProps) => {
       }}
     >
       <DashboardMenuItem />
+      <SubMenu
+        handleToggle={() => handleToggle('menuSales')}
+        isOpen={state.menuSales}
+        name="posts"
+        icon={<LabelIcon />}
+        dense={dense}
+      >
+        <MenuItemLink
+          to="/posts"
+          state={{ _scrollToTop: true }}
+          primaryText={translate(`NFTList`, {
+            smart_count: 2,
+          })}
+          leftIcon={<LabelIcon />}
+          dense={dense}
+        />
+      </SubMenu>
+
       {/* <SubMenu
         handleToggle={() => handleToggle('menuSales')}
         isOpen={state.menuSales}
