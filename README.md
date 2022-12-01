@@ -1,23 +1,13 @@
-# React18 starter example
+# ReactAdminExample
 
-React18 の開発用テンプレート
-
-## ディレクトリ構成
-
-components のみ
-
-## ライブラリ
-
-- axios
-- react-query
-- styled-components
+ReactAdmin を用いた管理画面サンプル
 
 ### 環境構築
 
 ## 1. `git clone`
 
 ```bash
-git@github.com:Fujiwara-Ken/React18-starter.git
+git@github.com:fjwr1024/react-admin-sample.git
 ```
 
 ## 2. `yarn install`
