@@ -1,7 +1,4 @@
-import * as React from 'react';
-import { useState } from 'react';
 import { List, Datagrid, TextField } from 'react-admin';
-import BaseAlert from '../alerts/BaseAlert';
 
 export interface NFT {
   name: string;
