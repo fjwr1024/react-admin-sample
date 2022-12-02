@@ -5,7 +5,6 @@ import {
   Box,
   MenuItem,
   ListItemIcon,
-  ListItemText,
   Typography,
   useMediaQuery,
   Theme,
@@ -26,13 +25,11 @@ const ConfigurationMenu = React.forwardRef((props, ref) => {
       <ListItemIcon>
         <SettingsIcon />
       </ListItemIcon>
-      <ListItemText>{translate('pos.configuration')}</ListItemText>
     </MenuItem>
   );
 });
 const CustomUserMenu = () => (
   <UserMenu>
-    <ConfigurationMenu />
     <Logout />
   </UserMenu>
 );

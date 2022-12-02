@@ -13,13 +13,13 @@ import {
 
 import SubMenu from './SubMenu';
 
-type MenuName = 'menuCatalog' | 'menuSales' | 'menuCustomers';
+type MenuName = 'menuUsers' | 'menuPosts' | 'menuNfts';
 
 const Menu = ({ dense = false }: MenuProps) => {
   const [state, setState] = useState({
-    menuCatalog: true,
-    menuSales: true,
-    menuCustomers: true,
+    menuUsers: true,
+    menuPosts: true,
+    menuNfts: true,
   });
   const translate = useTranslate();
   const [open] = useSidebarState();
@@ -44,14 +44,14 @@ const Menu = ({ dense = false }: MenuProps) => {
     >
       <DashboardMenuItem />
       <SubMenu
-        handleToggle={() => handleToggle('menuSales')}
-        isOpen={state.menuSales}
-        name="users"
+        handleToggle={() => handleToggle('menuUsers')}
+        isOpen={state.menuUsers}
+        name="Users"
         icon={<LabelIcon />}
         dense={dense}
       >
         <MenuItemLink
-          to="/user-list"
+          to="/users"
           state={{ _scrollToTop: true }}
           primaryText={translate(`UserList`, {
             smart_count: 2,
@@ -60,7 +60,7 @@ const Menu = ({ dense = false }: MenuProps) => {
           dense={dense}
         />
         <MenuItemLink
-          to="/user-create"
+          to="/users/create"
           state={{ _scrollToTop: true }}
           primaryText={translate(`UserCreate`, {
             smart_count: 2,
@@ -70,14 +70,14 @@ const Menu = ({ dense = false }: MenuProps) => {
         />
       </SubMenu>
       <SubMenu
-        handleToggle={() => handleToggle('menuSales')}
-        isOpen={state.menuSales}
-        name="posts"
+        handleToggle={() => handleToggle('menuPosts')}
+        isOpen={state.menuPosts}
+        name="Posts"
         icon={<LabelIcon />}
         dense={dense}
       >
         <MenuItemLink
-          to="/posts-list"
+          to="/posts"
           state={{ _scrollToTop: true }}
           primaryText={translate(`PostList`, {
             smart_count: 2,
@@ -86,7 +86,7 @@ const Menu = ({ dense = false }: MenuProps) => {
           dense={dense}
         />
         <MenuItemLink
-          to="/posts-create"
+          to="/posts/create"
           state={{ _scrollToTop: true }}
           primaryText={translate(`PostCreate`, {
             smart_count: 2,
@@ -97,9 +97,9 @@ const Menu = ({ dense = false }: MenuProps) => {
       </SubMenu>
 
       <SubMenu
-        handleToggle={() => handleToggle('menuSales')}
-        isOpen={state.menuSales}
-        name="nft"
+        handleToggle={() => handleToggle('menuNfts')}
+        isOpen={state.menuNfts}
+        name="NFT"
         icon={<LabelIcon />}
         dense={dense}
       >
