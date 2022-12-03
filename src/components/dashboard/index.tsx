@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import MonthlyRevenue from './MonthlyRevenue';
 import NbNewOrders from './MonthlyNewOrders';
 import NewCustomer from './NewCutomer';
 import SystemWalletInfo from './SystemWalletInfo';
 
 const styles = {
-  flex: { display: 'flex' },
+  flex: { display: 'flex', marginTop: '1em' },
   flexColumn: { display: 'flex', flexDirection: 'column' },
   leftCol: { flex: 1, marginRight: '0.5em' },
   rightCol: { flex: 1, marginLeft: '0.5em' },

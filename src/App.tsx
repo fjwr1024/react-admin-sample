@@ -9,8 +9,10 @@ import { DashBoard } from './components/dashboard';
 import './App.css';
 import Menu from './layout/Menu';
 import authProvider from './authProvider';
+
 import { Layout } from './layout';
 import { PostCreate } from './components/posts/create';
+import OrderList from './components/orders/OrderList';
 
 // apiURL
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
@@ -39,6 +41,7 @@ const App = (): JSX.Element => (
       create={PostCreate}
       edit={EditGuesser}
     />
+    <Resource name="orders" list={OrderList} />
   </Admin>
 );
 

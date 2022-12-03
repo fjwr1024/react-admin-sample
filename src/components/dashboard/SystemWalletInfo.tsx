@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import * as React from 'react';
 import {
   Avatar,
   Box,
@@ -18,6 +17,7 @@ import {
 } from '@mui/material';
 import WalletIcon from '@mui/icons-material/Wallet';
 import CommentIcon from '@mui/icons-material/Comment';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { Link } from 'react-router-dom';
 
 import {
@@ -50,14 +50,14 @@ const SystemWalletInfo = () => {
         <List>
           <ListItem>
             <ListItemIcon>
-              <CommentIcon />
+              <AttachMoneyIcon />
             </ListItemIcon>
             <ListItemText primary="10SOL" secondary="SOLANA" />
           </ListItem>
           <Divider variant="inset" component="li" />
           <ListItem>
             <ListItemIcon>
-              <CommentIcon />
+              <AttachMoneyIcon />
             </ListItemIcon>
             <ListItemText primary="100000" secondary="SPL-TOKEN" />
           </ListItem>

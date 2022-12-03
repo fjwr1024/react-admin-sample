@@ -122,6 +122,24 @@ const Menu = ({ dense = false }: MenuProps) => {
           dense={dense}
         />
       </SubMenu>
+
+      <SubMenu
+        handleToggle={() => handleToggle('menuNfts')}
+        isOpen={state.menuNfts}
+        name="Sales"
+        icon={<LabelIcon />}
+        dense={dense}
+      >
+        <MenuItemLink
+          to="/orders"
+          state={{ _scrollToTop: true }}
+          primaryText={translate(`OrderList`, {
+            smart_count: 2,
+          })}
+          leftIcon={<LabelIcon />}
+          dense={dense}
+        />
+      </SubMenu>
     </Box>
   );
 };

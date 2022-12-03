@@ -1,69 +1,47 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
   extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'airbnb/hooks',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
+    ecmaVersion: 11,
     sourceType: 'module',
-    tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: ['tsconfig.json'],
   },
-  plugins: ['react', '@typescript-eslint'],
-  ignorePatterns: ['.eslintrc.js'],
+  plugins: ['@typescript-eslint', 'unused-imports'],
+  root: true,
   rules: {
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    'import/prefer-default-export': 'off',
-    'no-unsafe-assignment': 'off',
-    'no-unsafe-call': 'off',
-    'react/jsx-props-no-spreading': ['off'],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'react/function-component-definition': [
-      2,
-      { namedComponents: 'arrow-function' },
-    ],
-    'import/extensions': [
-      'error',
+    '@typescript-eslint/no-namespace': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/restrict-template-expressions': 0,
+    '@typescript-eslint/no-unsafe-member-access': 0,
+    '@typescript-eslint/no-floating-promises': 0,
+    '@typescript-eslint/no-unsafe-return': 0,
+    '@typescript-eslint/no-unsafe-assignment': 0,
+    '@typescript-eslint/no-unsafe-call': 0,
+    '@typescript-eslint/no-unsafe-argument': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/require-await': 0,
+    '@typescript-eslint/no-misused-promises': 0,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'unused-imports/no-unused-vars': [
+      'warn',
       {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
       },
     ],
-    'react/jsx-filename-extension': [
+    '@typescript-eslint/quotes': [
       'error',
+      'single',
       {
-        extensions: ['.jsx', '.tsx'],
+        allowTemplateLiterals: true,
       },
     ],
-    'react/react-in-jsx-scope': 'off',
-    'no-void': [
-      'error',
-      {
-        allowAsStatement: true,
-      },
-    ],
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
   },
 };
