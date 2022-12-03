@@ -68,7 +68,7 @@ const NewCustomers = () => {
       <Button
         sx={{ borderRadius: 0 }}
         component={Link}
-        to="/customers"
+        to="/users"
         size="small"
         color="primary"
       >

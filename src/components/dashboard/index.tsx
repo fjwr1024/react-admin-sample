@@ -1,9 +1,8 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import { Title } from 'react-admin';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import MonthlyRevenue from './MonthlyRevenue';
 import NbNewOrders from './MonthlyNewOrders';
 import NewCustomer from './NewCutomer';
+import SystemWalletInfo from './SystemWalletInfo';
 
 const styles = {
   flex: { display: 'flex' },
@@ -27,11 +26,10 @@ export const DashBoard = () => (
         <Spacer />
         <VerticalSpacer />
       </div>
-      <div style={styles.singleCol} />
-      <div style={styles.singleCol} />
     </div>
     <div style={styles.rightCol}>
       <div style={styles.flex}>
+        <SystemWalletInfo />
         <Spacer />
         <NewCustomer />
       </div>
