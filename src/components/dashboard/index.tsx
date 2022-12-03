@@ -2,6 +2,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Title } from 'react-admin';
 import MonthlyRevenue from './MonthlyRevenue';
+import NbNewOrders from './MonthlyNewOrders';
+import NewCustomer from './NewCutomer';
 
 const styles = {
   flex: { display: 'flex' },
@@ -18,8 +20,12 @@ export const DashBoard = () => (
   <div style={styles.flex}>
     <div style={styles.leftCol}>
       <div style={styles.flex}>
-        <MonthlyRevenue value="4000" />
+        <MonthlyRevenue value={4000} />
         <Spacer />
+        <VerticalSpacer />
+        <NbNewOrders value={50} />
+        <Spacer />
+        <VerticalSpacer />
       </div>
       <div style={styles.singleCol} />
       <div style={styles.singleCol} />
@@ -27,6 +33,7 @@ export const DashBoard = () => (
     <div style={styles.rightCol}>
       <div style={styles.flex}>
         <Spacer />
+        <NewCustomer />
       </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
-import * as React from 'react';
-import DollarIcon from '@mui/icons-material/AttachMoney';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useTranslate } from 'react-admin';
 
 import CardWithIcon from './CardWithIcon';
@@ -8,17 +7,17 @@ interface Props {
   value: number;
 }
 
-const MonthlyRevenue = (props: Props) => {
+const MonthlyNewOrders = (props: Props) => {
   const { value } = props;
   const translate = useTranslate();
   return (
     <CardWithIcon
       to="/commands"
-      icon={DollarIcon}
-      title={translate('MonthlyRevenue')}
+      icon={ShoppingCartIcon}
+      title={translate('Monthly Orders')}
       subtitle={value}
     />
   );
 };
 
-export default MonthlyRevenue;
+export default MonthlyNewOrders;
