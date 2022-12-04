@@ -50,12 +50,6 @@ const orderFilters = [
   <NullableBooleanInput source="returned" />,
 ];
 
-const tabs = [
-  { id: 'ordered', name: 'ordered' },
-  { id: 'delivered', name: 'delivered' },
-  { id: 'cancelled', name: 'cancelled' },
-];
-
 const useGetTotals = (filterValues: any) => {
   const { total: totalOrdered } = useGetList('commands', {
     pagination: { perPage: 1, page: 1 },
